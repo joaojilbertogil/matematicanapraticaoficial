@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <metam name="author" content="João Pedro Spinda">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Matemática na Prática</title>
+
+
+</head>
+    <header>
+        <figure>
+            <img src="image/gigi.png" alt="logo" title="Meu logo" class="logo">
+        </figure>
+
+        <h1>Matemática na Prática </h1>
+    </header>
+<body>
+    <main>
+        <section class="contato">
+            <form action="/" method="post" id="formulario">
+                <label for="n1">Número 1</label>
+                <input type="text" id="n1" name="n1" placeholder="Insira o Primeiro Número">
+
+                <label for="n2">Número 2</label>
+                <input type="text" id="n2" name="n2" placeholder="Insira o Segundo Número">
+<br/>
+                Resultado
+                <br/>
+                <label id="lblresult"></label>
+
+                <button type="submit" onclick="adcao()" class="adicao">Adição </button>
+                <button type="submit" onclick="sub()" class="sub">Subitração </button>
+                <button type="submit" onclick="multi()" class="multi">Multiplicação </button>
+                <button type="submit" onclick="div()" class="div">Divisão </button>
+                <button onclick="limpar()" type="reset">Limpar</button>
+            </form>
+        </section>
+
+        <aside>
+            <figure>
+                <img src="image/contas3.png" alt="tabela"  class="contas">
+            </figure>
+
+            <section></section>
+        </aside>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+<footer>
+    <p>Made by João Gilberto C. Favaro &copy;</p>
+
+    <script>
+        function adcao() {
+            var valor = parseInt(document.getElementById('n1').value);
+            var valor2 = parseInt(document.getElementById('n2').value);
+            document.getElementById('lblresult').innerHTML = (valor + valor2);
+        }
+        
+        function sub() {
+            var valor = parseInt(document.getElementById('n1').value);
+            var valor2 = parseInt(document.getElementById('n2').value);
+            document.getElementById('lblresult').innerHTML = (valor - valor2);
+        }
+
+        function multi() {
+            var valor = parseInt(document.getElementById('n1').value);
+            var valor2 = parseInt(document.getElementById('n2').value);
+            document.getElementById('lblresult').innerHTML = (valor * valor2);
+        }
+
+        function div() {
+            var valor = parseInt(document.getElementById('n1').value);
+            var valor2 = parseInt(document.getElementById('n2').value);
+            document.getElementById('lblresult').innerHTML = (valor / valor2);
+        }
+
+        function limpar(){
+            document.getElementById('lblresult').innerHTML = '';
+        }
+    </script>
+</footer>
+</html>
